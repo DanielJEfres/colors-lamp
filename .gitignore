@@ -1,1 +1,10 @@
-    
+.env
+*.log
+
+.vscode/
+
+.DS_Store
+
+*.bak
+*.backup
+
