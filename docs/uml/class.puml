@@ -1,0 +1,29 @@
+@startuml
+package "Database Schema" {
+  class Users {
+    +int ID
+    +string FirstName
+    +string LastName
+    +string Login
+    +string Password
+  }
+
+  class Colors {
+    +int ID
+    +string Name
+    +int UserID
+  }
+}
+
+package "Backend APIs" {
+  class API_Logic {
+    +Login.php
+    +AddColor.php
+    +SearchColors.php
+  }
+}
+
+Users "1" -- "0..*" Colors : owns
+API_Logic ..> Users : interacts with
+API_Logic ..> Colors : interacts with
+@enduml
