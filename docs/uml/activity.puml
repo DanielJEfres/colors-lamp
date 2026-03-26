@@ -1,0 +1,38 @@
+@startuml
+start
+:Access colorsapp4331.lol;
+
+repeat
+  :Enter Credentials;
+  note right: MD5 hashing is currently\ncommented out in code.js
+  :Send Request to Login.php;
+
+  if (Credentials Valid?) then (yes)
+    :Set User Cookie;
+    :Redirect to color.html;
+    
+    partition "User Session" {
+      repeat
+        :Wait for User Action;
+        if (Action type?) then (Add Color)
+          :Enter Color Name;
+          :POST to AddColor.php;
+          :Display Confirmation;
+        else (Search Colors)
+          :Enter Search Term;
+          :POST to SearchColors.php;
+          :Update Results List;
+        endif
+      repeat while (Logout clicked?) is (no)
+      -> yes;
+    }
+    
+    :Clear Cookie;
+    :Redirect to index.html;
+  else (no)
+    :Display "Login Failed";
+  endif
+repeat while (User wants to retry?)
+
+stop
+@enduml
