@@ -7,7 +7,10 @@
     "doc": "docs"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "lint:js": "eslint \"public/**/*.js\"",
+  "lint:css": "stylelint \"public/**/*.css\"",
+  "lint:html": "htmlhint \"public/**/*.html\"",
+  "lint": "npm run lint:js && npm run lint:css && npm run lint:html"
   },
   "repository": {
     "type": "git",
