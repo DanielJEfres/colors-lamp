@@ -1,0 +1,30 @@
+{
+  "name": "colors-lamp",
+  "version": "1.0.0",
+  "description": "This project is a full-stack LAMP application built as part of my COP 4331 coursework. The app allows users to securely log in and manage a personal collection of colors. Saved colors live in a remote database and stay accessible across sessions.",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DanielJEfres/colors-lamp.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/DanielJEfres/colors-lamp/issues"
+  },
+  "homepage": "https://github.com/DanielJEfres/colors-lamp#readme",
+  "devDependencies": {
+    "eslint": "^10.2.0",
+    "htmlhint": "^1.9.2",
+    "stylelint": "^17.6.0",
+    "stylelint-config-standard": "^40.0.0"
+  }
+}

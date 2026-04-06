@@ -8,3 +8,4 @@
 *.bak
 *.backup
 
+node_modules/
