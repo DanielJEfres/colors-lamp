@@ -7,11 +7,13 @@
     "doc": "docs"
   },
   "scripts": {
-    "lint:js": "eslint \"public/**/*.js\"",
-    "lint:css": "stylelint \"public/**/*.css\"",
-    "lint:html": "htmlhint \"public/**/*.html\"",
-    "lint": "npm run lint:js && npm run lint:css && npm run lint:html"
-  },
+  "lint:js": "eslint \"public/**/*.js\"",
+  "lint:css": "stylelint \"public/**/*.css\"",
+  "lint:html": "htmlhint \"public/**/*.html\"",
+  "lint": "npm run lint:js && npm run lint:css && npm run lint:html",
+  "fix": "eslint \"public/**/*.js\" --fix && stylelint \"public/**/*.css\" --fix",
+  "test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest"
+},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/DanielJEfres/colors-lamp.git"
@@ -26,9 +28,11 @@
   "homepage": "https://github.com/DanielJEfres/colors-lamp#readme",
   "devDependencies": {
     "@eslint/js": "^10.0.1",
+    "cross-env": "^10.1.0",
     "eslint": "^10.2.0",
     "globals": "^17.4.0",
     "htmlhint": "^1.9.2",
+    "jest": "^30.3.0",
     "stylelint": "^17.6.0",
     "stylelint-config-standard": "^40.0.0"
   }
